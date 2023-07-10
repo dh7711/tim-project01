@@ -1,11 +1,12 @@
 package db_dto;
 
 public class NewStDTO {
+	private String manager; 
 	private String id;
 	private String name;
 	private int kor, eng, mat, avg, sum;
 	public String getId() {
-		return id;
+		return id; 
 	}
 	public void setId(String id) {
 		this.id = id;
@@ -21,6 +22,12 @@ public class NewStDTO {
 	}
 	public void setKor(int kor) {
 		this.kor = kor;
+	}
+	public String getManager() {
+		return manager;
+	}
+	public void setManager(String manager) {
+		this.manager = manager;
 	}
 	public int getEng() {
 		return eng;
