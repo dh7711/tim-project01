@@ -43,9 +43,9 @@ public class NewStDAO {
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
 			if( rs.next() ) { 
-				dto = new NewStDTO( rs.getString("id"),
-						rs.getInt("name"),
-						rs.getInt("age"),
+				dto = new NewStDTO( rs.getString("name"),
+						rs.getInt("kor"),
+						rs.getInt("eng"),
 						rs.getInt("mat"),
 						rs.getInt("sum"),
 						rs.getInt("avg")
@@ -79,7 +79,7 @@ public class NewStDAO {
 	}
 
 	public int modify( NewStDTO d ) {
-		String sql = "update newst set kor=?, eng?, mat, sum, avg where name=?";
+		String sql = "update newst set kor=?, eng=?, mat=?, sum=?, avg=? where name=?";
 		int result = 0;
 		try {
 			ps = con.prepareStatement(sql);
