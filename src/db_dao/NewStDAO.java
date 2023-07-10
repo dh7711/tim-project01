@@ -38,7 +38,7 @@ public class NewStDAO {
 
 	public NewStDTO search( String name ) {
 		NewStDTO dto = null;
-		String sql ="select * from newst where id='"+name+"'";
+		String sql ="select * from newst where name='"+name+"'";
 		try {
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
@@ -79,7 +79,7 @@ public class NewStDAO {
 	}
 
 	public int modify( NewStDTO d ) {
-		String sql = "update newst set name=?, age=? where id=?";
+		String sql = "update newst set kor=?, eng?, mat, sum, avg where name=?";
 		int result = 0;
 		try {
 			ps = con.prepareStatement(sql);
@@ -100,7 +100,7 @@ public class NewStDAO {
 
 	public int delete(String name) {
 		int result = 0;
-		String sql ="delete from newst where id = ?";
+		String sql ="delete from newst where name = ?";
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1 , name );
