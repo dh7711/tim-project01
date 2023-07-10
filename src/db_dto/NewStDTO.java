@@ -5,6 +5,13 @@ public class NewStDTO {
 	private String id;
 	private String name;
 	private int kor, eng, mat, avg, sum;
+	
+	public NewStDTO(String name, int kor, int eng, int math, int sum, int avg ) {
+		this.name = name; this.kor = kor; this.eng = eng; this.mat = mat; this.sum = sum; this.avg = avg;
+	}
+	public NewStDTO() {
+
+	}
 	public String getId() {
 		return id; 
 	}
